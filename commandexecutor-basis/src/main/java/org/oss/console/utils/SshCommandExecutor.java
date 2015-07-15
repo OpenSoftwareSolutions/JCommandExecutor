@@ -28,11 +28,11 @@ public class SshCommandExecutor extends AbstractCommandExecutor {
 			throw new IOException("Error while connecting to host: " + host,e);
 		}
     }
-    
+
     public void disconnect() {
     	session.disconnect();
     }
-    
+
 	@Override
 	InputStream executeCommand(String commandString) throws IOException {
 		Channel channel=null;
